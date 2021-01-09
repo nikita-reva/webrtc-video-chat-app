@@ -1,4 +1,4 @@
-const socket = io.connect('http://localhost:4000')
+const socket = io.connect('https://murmuring-cliffs-03201.herokuapp.com:4000')
 
 const videoChatLobby = document.getElementById('video-chat-lobby')
 const videoChatRoom = document.getElementById('video-chat-room')
