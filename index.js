@@ -1,19 +1,27 @@
 const express = require('express')
 const socket = require('socket.io')
-const app = express()
 const path = require('path')
+const dotenv = require('dotenv')
+const app = express()
+
+//////////////////////////////////////////////////
+// Utilize environment variables
+
+dotenv.config()
 
 // Starts the server
 
-let server = app.listen(4000, function () {
-	console.log('Server is running')
-})
+PORT = process.env.PORT || 4000
 
 app.use(express.static(path.join(__dirname, '/public')))
 
 app.get('*', (req, res) =>
 	res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
 )
+
+let server = app.listen(PORT, function () {
+	console.log('Server is running')
+})
 
 // Upgrades the server to accept websockets.
 
