@@ -1,0 +1,48 @@
+body {
+	background-color: black;
+	font-family: 'Helvetica';
+}
+
+h2 {
+	font-size: 18px;
+	padding: 10px 20px;
+	color: #ffffff;
+}
+
+#video-chat-lobby {
+	text-align: center;
+	max-width: 600px;
+	background-color: #141414;
+	margin: 30px auto;
+}
+
+#video-chat-room {
+	text-align: center;
+	margin: 30px auto;
+}
+
+label {
+	box-sizing: border-box;
+	display: block;
+	padding: 10px 20px;
+}
+
+input {
+	padding: 20px;
+	box-sizing: border-box;
+	background: #eee;
+	display: block;
+	width: 100%;
+	background: rgb(255, 253, 253);
+	font-family: Nunito;
+	font-size: 16px;
+}
+
+button {
+	background: #141414;
+	color: #fff;
+	font-size: 18px;
+	padding: 12px 0;
+	width: 100%;
+	cursor: pointer;
+}
