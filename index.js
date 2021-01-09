@@ -1,6 +1,7 @@
 const express = require('express')
 const socket = require('socket.io')
 const app = express()
+const path = require('path')
 
 // Starts the server
 
