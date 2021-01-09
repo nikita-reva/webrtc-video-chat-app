@@ -8,8 +8,6 @@ let server = app.listen(4000, function () {
 	console.log('Server is running')
 })
 
-const __dirname = path.resolve()
-
 app.use(express.static(path.join(__dirname, '/public')))
 
 app.get('*', (req, res) =>
