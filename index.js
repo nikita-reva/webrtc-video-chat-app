@@ -8,7 +8,13 @@ let server = app.listen(4000, function () {
 	console.log('Server is running')
 })
 
-app.use(express.static('public'))
+const __dirname = path.resolve()
+
+app.use(express.static(path.join(__dirname, '/public')))
+
+app.get('*', (req, res) =>
+	res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
+)
 
 // Upgrades the server to accept websockets.
 
