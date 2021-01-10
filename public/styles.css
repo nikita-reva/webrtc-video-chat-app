@@ -1,48 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,400;1,400&display=swap');
+
+* {
+	box-sizing: border-box;
+	font-family: 'Muli', sans-serif;
+}
+
 body {
-	background-color: black;
+	background-color: #2b3745;
 	font-family: 'Helvetica';
+}
+
+#room-display {
+	text-align: center;
+	margin: 0 auto;
 }
 
 h2 {
 	font-size: 18px;
-	padding: 10px 20px;
+	padding: 5px 20px;
 	color: #ffffff;
 }
 
 #video-chat-lobby {
 	text-align: center;
+	width: 80%;
 	max-width: 600px;
-	background-color: #141414;
+	background-color: #456289;
 	margin: 30px auto;
+	padding: 15px 30px;
 }
 
 #video-chat-room {
-	text-align: center;
+	width: 80%;
+	max-width: 600px;
 	margin: 30px auto;
+	position: relative;
+}
+
+.video-container {
+	width: 100%;
+	max-width: 600px;
+	margin: 10px 0;
+}
+
+.video {
+	width: 100%;
+	border-radius: 10px;
+}
+
+#peer-video {
+	width: 25%;
+	top: 5%;
+	right: 2%;
+	position: absolute;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	display: none;
 }
 
 label {
 	box-sizing: border-box;
 	display: block;
+	color: #fff;
 	padding: 10px 20px;
 }
 
 input {
 	padding: 20px;
+	font-family: 'Muli', sans-serif;
 	box-sizing: border-box;
-	background: #eee;
+	background: #80a4c0;
+	color: #000;
 	display: block;
+	border-radius: 10px;
+	border: none;
 	width: 100%;
-	background: rgb(255, 253, 253);
 	font-family: Nunito;
 	font-size: 16px;
 }
 
 button {
-	background: #141414;
+	background: #1d1b28;
+	border: none;
 	color: #fff;
 	font-size: 18px;
 	padding: 12px 0;
 	width: 100%;
+	margin: 10px 0px;
+	border-radius: 10px;
 	cursor: pointer;
+	transition: 0.3s ease;
+}
+
+button:hover {
+	background: #27243a;
+	transform: scale(1.02);
+}
+
+input:focus,
+button:focus {
+	outline: none;
+}
+
+input:focus {
+	font-family: 'Muli', sans-serif;
+	background: #5e96c2;
+	color: #fff;
+}
+
+input::placeholder {
+	font-family: 'Muli', sans-serif;
+	color: #fff;
+	opacity: 0.5;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	font-family: 'Muli', sans-serif;
+	border: 1px solid #03a9f4;
+	-webkit-text-fill-color: #03a9f4;
+	-webkit-box-shadow: 0 0 0px 1000px #2b3745 inset;
+	transition: background-color 5000s ease-in-out 0s;
 }

@@ -6,6 +6,7 @@ const joinButton = document.getElementById('join')
 const userVideo = document.getElementById('user-video')
 const peerVideo = document.getElementById('peer-video')
 const roomInput = document.getElementById('room-name')
+const roomDisplay = document.getElementById('room-display')
 let roomName
 let creator = false
 let rtcPeerConnection
@@ -24,6 +25,7 @@ joinButton.addEventListener('click', function () {
 	if (roomName === '') {
 		alert('Please enter a room name')
 	} else {
+		roomDisplay.innerText = 'Room: ' + roomName
 		socket.emit('join', roomName)
 	}
 })
@@ -136,7 +138,7 @@ function onIceCandidateFunction(event) {
 // Implementing the OnTrackFunction which is part of the RTCPeerConnection Interface.
 
 function onTrackFunction(event) {
-	console.log('Set peer video')
+	peerVideo.style.display = 'block'
 	peerVideo.srcObject = event.streams[0]
 	peerVideo.onloadedmetadata = function (e) {
 		peerVideo.play()
