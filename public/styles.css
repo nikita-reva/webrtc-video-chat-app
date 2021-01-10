@@ -50,8 +50,8 @@ h2 {
 
 #user-video.connected {
 	width: 25%;
-	top: 5%;
-	right: 2%;
+	top: 2vw;
+	right: 2vw;
 	position: absolute;
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 }
@@ -106,8 +106,9 @@ button:focus {
 
 input:focus {
 	font-family: 'Muli', sans-serif;
-	background: #5e96c2;
-	color: #fff;
+	background: #2b3745;
+	color: #03a9f4;
+	border: 1px solid #03a9f4;
 }
 
 input::placeholder {
