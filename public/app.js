@@ -138,6 +138,7 @@ function onIceCandidateFunction(event) {
 // Implementing the OnTrackFunction which is part of the RTCPeerConnection Interface.
 
 function onTrackFunction(event) {
+	userVideo.classList.add('connected')
 	peerVideo.style.display = 'block'
 	peerVideo.srcObject = event.streams[0]
 	peerVideo.onloadedmetadata = function (e) {
