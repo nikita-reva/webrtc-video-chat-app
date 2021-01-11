@@ -195,6 +195,17 @@ socket.on('leave', function () {
 	userVideo.classList.remove('connected')
 })
 
+window.addEventListener('unload', function () {
+	if (rtcPeerConnection) {
+		rtcPeerConnection.ontrack = null
+		rtcPeerConnection.onicecandidate = null
+		rtcPeerConnection.close()
+		rtcPeerConnection = null
+	}
+
+	socket.emit('leave', roomName)
+})
+
 ///////////////////////////////////////////////////
 // Functions
 
