@@ -116,16 +116,20 @@ input::placeholder {
 	opacity: 0.5;
 }
 
-.room-controls {
+#room-controls {
+	display: none;
+}
+
+#room-controls.active {
+	display: flex;
 	text-align: center;
 	width: 80%;
 	max-width: 500px;
-	margin: 30px auto;
-	display: flex;
+	margin: 0 auto;
 	gap: 3px;
 }
 
-.room-controls button {
+#room-controls button {
 	flex: 100%;
 	border: 1px solid #03a9f4;
 	padding: 5px 0;
@@ -134,11 +138,17 @@ input::placeholder {
 	transition: 0.3s ease;
 }
 
-.room-controls button:hover {
+#room-controls #mute.active,
+#room-controls #hide.active {
+	border: 1px solid rgb(76, 175, 76);
+	background: rgb(76, 175, 76);
+}
+
+#room-controls button:hover {
 	background: #03a9f4;
 }
 
-.room-controls #leave:hover {
+#room-controls #leave:hover {
 	border: 1px solid #e74c3c;
 	background: #e74c3c;
 }
