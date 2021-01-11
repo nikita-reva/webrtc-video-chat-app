@@ -195,6 +195,8 @@ socket.on('leave', function () {
 	userVideo.classList.remove('connected')
 })
 
+// Triggered when a browser tab is closed during active communication
+
 window.addEventListener('unload', function () {
 	if (rtcPeerConnection) {
 		rtcPeerConnection.ontrack = null
