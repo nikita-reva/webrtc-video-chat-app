@@ -24,7 +24,7 @@ h2 {
 #video-chat-lobby {
 	text-align: center;
 	width: 80%;
-	max-width: 600px;
+	max-width: 500px;
 	background-color: #456289;
 	margin: 30px auto;
 	padding: 15px 30px;
@@ -32,14 +32,13 @@ h2 {
 
 #video-chat-room {
 	width: 80%;
-	max-width: 600px;
+	max-width: 500px;
 	margin: 30px auto;
 	position: relative;
 }
 
 .video-container {
 	width: 100%;
-	max-width: 600px;
 	margin: 10px 0;
 }
 
@@ -81,7 +80,7 @@ input {
 	font-size: 16px;
 }
 
-button {
+#join {
 	background: #1d1b28;
 	border: none;
 	color: #fff;
@@ -94,7 +93,7 @@ button {
 	transition: 0.3s ease;
 }
 
-button:hover {
+#join:hover {
 	background: #27243a;
 	transform: scale(1.02);
 }
@@ -115,6 +114,33 @@ input::placeholder {
 	font-family: 'Muli', sans-serif;
 	color: #fff;
 	opacity: 0.5;
+}
+
+.room-controls {
+	text-align: center;
+	width: 80%;
+	max-width: 500px;
+	margin: 30px auto;
+	display: flex;
+	gap: 3px;
+}
+
+.room-controls button {
+	flex: 100%;
+	border: 1px solid #03a9f4;
+	padding: 5px 0;
+	background: #2b3745;
+	color: #fff;
+	transition: 0.3s ease;
+}
+
+.room-controls button:hover {
+	background: #03a9f4;
+}
+
+.room-controls #leave:hover {
+	border: 1px solid #e74c3c;
+	background: #e74c3c;
 }
 
 input:-webkit-autofill,

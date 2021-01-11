@@ -109,7 +109,7 @@ socket.on('answer', function (answer) {
 // Functions
 
 function getUserMedia() {
-	const constraints = { audio: true, video: { width: 1280, height: 720 } }
+	const constraints = { audio: true, video: { width: 500, height: 500 } }
 	navigator.mediaDevices
 		.getUserMedia(constraints)
 		.then(function (mediaStream) {
